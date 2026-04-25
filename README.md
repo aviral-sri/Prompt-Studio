@@ -9,6 +9,10 @@
   <img src="https://img.shields.io/badge/code%20style-ruff-000000.svg" alt="code style">
 </div>
 
+<p align="center">
+  <img width="320" height="320" src="/public/prompt-studio.png" alt="Material Bread logo" style="margin-right:20px;">
+</p>
+
 <br>
 
 AI-powered prompt engineering workbench — analyze, score, optimize, and store prompts with a terminal-style UI and a FastAPI backend backed by PostgreSQL + pgvector.
