@@ -1,0 +1,167 @@
+name: Pull Request
+description: Standard checklist for submitting a pull request to Prompt Studio
+title: "[PR]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Summary
+        Describe the problem and fix in 2–5 bullets.
+
+        If this PR fixes a beta-release blocker, title it `fix(<component>): beta blocker - <summary>`.
+
+  - type: textarea
+    attributes:
+      label: What changed
+      description: "Bullet summary: Problem / Why it matters / What changed / What did NOT change"
+      placeholder: |
+        - Problem:
+        - Why it matters:
+        - What changed:
+        - What did NOT change (scope boundary):
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Change Type
+      description: Select all that apply
+      options:
+        - label: Bug fix
+        - label: Feature
+        - label: Refactor required for the fix
+        - label: Docs
+        - label: Security hardening
+        - label: Chore/infra
+
+  - type: checkboxes
+    attributes:
+      label: Scope
+      description: Select all touched areas
+      options:
+        - label: API / backend
+        - label: Prompt scoring engine
+        - label: Frontend / UI
+        - label: Wizard flow
+        - label: Model definitions
+        - label: Token/cost estimation
+        - label: Auth / security
+        - label: CI/CD / infra
+
+  - type: input
+    attributes:
+      label: Linked Issue
+      description: "e.g. Closes #42"
+      placeholder: "Closes #"
+
+  - type: checkboxes
+    attributes:
+      label: Bug / Regression
+      options:
+        - label: This PR fixes a bug or regression
+
+  - type: textarea
+    attributes:
+      label: Root Cause
+      description: For bug fixes, explain why this happened. Otherwise write `N/A`.
+      placeholder: |
+        - Root cause:
+        - Missing detection / guardrail:
+        - Contributing context (if known):
+
+  - type: textarea
+    attributes:
+      label: Regression Test Plan
+      description: For bug fixes, describe the smallest reliable test coverage. Otherwise write `N/A`.
+      placeholder: |
+        - Target test or file:
+        - Scenario the test should lock in:
+        - If no new test is added, why not:
+
+  - type: textarea
+    attributes:
+      label: User-visible / Behavior Changes
+      description: List user-visible changes including defaults/config. If none, write `None`.
+      placeholder: "None"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Security Impact
+      description: Answer each question. Explain risk + mitigation for any `Yes`.
+      placeholder: |
+        - New permissions/capabilities? (Yes/No)
+        - Secrets/tokens handling changed? (Yes/No)
+        - New/changed network calls? (Yes/No)
+        - Command/tool execution surface changed? (Yes/No)
+        - Data access scope changed? (Yes/No)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Repro + Verification
+      description: Environment, steps, expected, and actual behavior.
+      placeholder: |
+        **Environment**
+        - OS:
+        - Runtime:
+        - Model/provider:
+
+        **Steps**
+        1.
+        2.
+        3.
+
+        **Expected**
+        -
+
+        **Actual**
+        -
+
+  - type: checkboxes
+    attributes:
+      label: Evidence
+      description: Attach at least one
+      options:
+        - label: Failing test/log before + passing after
+        - label: Trace/log snippets
+        - label: Screenshot/recording
+        - label: Perf numbers (if relevant)
+
+  - type: textarea
+    attributes:
+      label: Human Verification
+      description: What you personally verified (not just CI), and how.
+      placeholder: |
+        - Verified scenarios:
+        - Edge cases checked:
+        - What you did NOT verify:
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Review Conversations
+      options:
+        - label: I replied to or resolved every bot review conversation I addressed in this PR.
+        - label: I left unresolved only the conversations that still need reviewer or maintainer judgment.
+
+  - type: textarea
+    attributes:
+      label: Compatibility / Migration
+      placeholder: |
+        - Backward compatible? (Yes/No)
+        - Config/env changes? (Yes/No)
+        - Migration needed? (Yes/No)
+        - If yes, exact upgrade steps:
+
+  - type: textarea
+    attributes:
+      label: Risks and Mitigations
+      description: List only real risks for this PR. If none, write `None`.
+      placeholder: |
+        - Risk:
+          - Mitigation:
