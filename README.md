@@ -1,6 +1,25 @@
-# PromptForge — Prompt Engineering POC
+# PromptStudio 🐖
 
-AI-powered prompt builder, scorer, validator, and optimizer.
+<div>
+  <p>
+  AI-powered prompt builder, scorer, validator, and optimizer.
+  </p>
+  <img src="https://badgen.net/badge/status/Under Development/red?icon=lgtm" alt="">
+
+  ![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg)
+  ![License](https://img.shields.io/badge/License-MIT-blue.svg)
+  ![Commits](https://img.shields.io/github/commit-activity/m/utk2103/Prompt-Studio)
+  ![Repo Size](https://img.shields.io/github/repo-size/utk2103/Prompt-Studio)
+  ![Code Size](https://img.shields.io/github/languages/code-size/utk2103/Prompt-Studio)
+  ![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)
+
+</div>
+
+<p align="center">
+  <img width="320" height="320" src="/public/prompt-studio.png" alt="Material Bread logo" style="margin-right:20px;">
+</p>
+
+<hr>
 
 ## Quick Start
 ```bash
